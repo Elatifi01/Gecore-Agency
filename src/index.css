@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-lime: #6aba41;
+  --color-lime-400: #6aba41;
+  --color-blue: #3585b6;
+  --color-dark: #09090b;
+  --font-sans: "Outfit", sans-serif;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    @apply transition-colors duration-300 antialiased selection:bg-lime selection:text-black;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #71717a;
+}
+
+/* Input Styles */
+.nexus-input {
+  @apply w-full bg-transparent border-b-2 border-zinc-200 dark:border-zinc-800 py-2 text-lg outline-none transition-colors duration-300 text-zinc-900 dark:text-white;
+}
+.nexus-input:focus {
+  @apply border-lime;
+}
+.nexus-input.invalid {
+  @apply border-red-500;
+}
+
+/* Animations */
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+.marquee-content {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+html[dir="rtl"] .marquee-content {
+  animation: marqueeRtl 20s linear infinite;
+}
+@keyframes marqueeRtl {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
