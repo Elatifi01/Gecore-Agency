@@ -82,7 +82,6 @@ const Home = () => {
         "GECORE 360° a conçu notre plateforme sur-mesure avec une maîtrise technique impressionnante. L'utilisation de Laravel et React a rendu notre application incroyablement rapide et stable.",
       name: "Sarah Jenkins",
       role: "CTO, FinTech Horizon",
-      img: "33",
       highlight: false,
     },
     {
@@ -90,7 +89,6 @@ const Home = () => {
         "La création de notre architecture SaaS multi-tenant était un défi majeur. L'équipe de GECORE a livré une solution ultra-scalable et sécurisée, bien au-delà de nos attentes.",
       name: "David Chen",
       role: "Directeur Produit, EdTech Solutions",
-      img: "12",
       highlight: true,
     },
     {
@@ -98,7 +96,6 @@ const Home = () => {
         "Nous avions besoin d'une application web complexe livrée rapidement. GECORE 360° a repensé toute notre expérience utilisateur tout en produisant un code d'une qualité irréprochable.",
       name: "Elena Rodriguez",
       role: "Fondatrice, Nova Retail",
-      img: "59",
       highlight: false,
     },
   ];
@@ -430,11 +427,6 @@ const Home = () => {
                 </div>
                 <p className="text-lg font-medium mb-8">{t.quote}</p>
                 <div className="flex items-center gap-4">
-                  <img
-                    src={`https://i.pravatar.cc/100?img=${t.img}`}
-                    className={`w-12 h-12 rounded-full ${t.highlight ? "border-2 border-lime" : ""}`}
-                    alt={t.name}
-                  />
                   <div>
                     <h5 className="font-bold text-sm">{t.name}</h5>
                     <p
