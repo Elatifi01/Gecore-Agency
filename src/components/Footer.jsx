@@ -26,22 +26,22 @@ const Footer = ({ darkMode, toggleDarkMode, isRtl, toggleRtl }) => {
             </h4>
             <ul className="space-y-4 text-zinc-500 dark:text-zinc-400 text-sm">
               <li>
-                <Link to="/" className="hover:text-lime transition">
+                <Link to="/#home" className="hover:text-lime transition">
                   Accueil
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="hover:text-lime transition">
-                  Prestations & SaaS
+                <Link to="/#services" className="hover:text-lime transition">
+                  Services
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="hover:text-lime transition">
+                <Link to="/#about" className="hover:text-lime transition">
                   À propos
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-lime transition">
+                <Link to="/#contact" className="hover:text-lime transition">
                   Contact
                 </Link>
               </li>
