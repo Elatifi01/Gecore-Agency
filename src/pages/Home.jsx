@@ -138,7 +138,7 @@ const Home = () => {
                   to="/#contact"
                   className="bg-lime text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-lime-400 transition shadow-[0_0_20px_rgba(106,186,65,0.4)] text-center"
                 >
-                  Lancer un projet (Agence)
+                  Lancer un projet
                 </Link>
                 <Link
                   to="/#solution-saas"

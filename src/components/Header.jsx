@@ -75,12 +75,12 @@ const Header = () => {
           </nav>
 
           <div className="flex items-center gap-4 ml-auto md:ml-0">
-            <Link
+            {/* <Link
               to="/#contact"
               className="hidden md:block bg-zinc-900 dark:bg-white text-white dark:text-black px-6 py-2.5 rounded-full text-sm font-bold hover:scale-105 transition-transform"
             >
               Parlons-en
-            </Link>
+            </Link> */}
 
             <button
               onClick={() => setMobileMenuOpen(true)}
