@@ -55,7 +55,7 @@ const Layout = ({ children }) => {
   }, [location.pathname, location.hash]);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-dark text-zinc-900 dark:text-white font-sans selection:bg-lime selection:text-black flex flex-col">
+    <div className="min-h-screen overflow-x-hidden bg-white dark:bg-dark text-zinc-900 dark:text-white font-sans selection:bg-lime selection:text-black flex flex-col">
       <Header />
       <main className="flex-grow">{children}</main>
       <Footer

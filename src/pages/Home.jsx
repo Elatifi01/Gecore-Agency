@@ -106,7 +106,7 @@ const Home = () => {
       <ScrollRevealSection>
         <section
           id="home"
-          className="pt-40 pb-20 px-6 max-w-7xl mx-auto min-h-screen flex items-center"
+          className="pt-28 md:pt-40 pb-16 md:pb-20 px-4 sm:px-6 max-w-7xl mx-auto min-h-screen flex items-center"
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-30 items-center ">
             {/* Left: Text */}
@@ -114,7 +114,7 @@ const Home = () => {
               <span className="inline-block px-4 py-2 rounded-full border border-zinc-200 dark:border-zinc-800 text-xs font-bold uppercase tracking-widest mb-6 text-lime-600 dark:text-lime">
                 ★ Agence Web & Éditeur SaaS
               </span>
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-black leading-[0.95] tracking-tight mb-8">
+              <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black leading-[0.95] tracking-tight mb-6 md:mb-8">
                 NOUS GÉNÉRONS <br />
                 <span
                   className="text-transparent bg-clip-text"
@@ -128,7 +128,7 @@ const Home = () => {
                 <br />
                 DIGITALE.
               </h1>
-              <p className="text-lg md:text-xl text-zinc-500 dark:text-zinc-400 max-w-lg leading-relaxed mb-10">
+              <p className="text-base sm:text-lg md:text-xl text-zinc-500 dark:text-zinc-400 max-w-lg leading-relaxed mb-8 md:mb-10">
                 GECORE 360° est un studio web hybride. Nous créons des
                 expériences sur-mesure pour nos clients et concevons nos propres
                 solutions SaaS (comme le CRM Alumni) pour redéfinir les
@@ -197,9 +197,9 @@ const Home = () => {
 
       {/* MARQUEE */}
       <ScrollRevealSection>
-        <section className="border-y border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-black/50 py-8">
+        <section className="border-y border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-black/50 py-6 sm:py-8">
           <div className="marquee-container">
-            <div className="marquee-content text-4xl md:text-6xl font-black text-zinc-200 dark:text-zinc-800 uppercase tracking-tighter">
+            <div className="marquee-content text-2xl sm:text-4xl md:text-6xl font-black text-zinc-200 dark:text-zinc-800 uppercase tracking-tighter">
               SaaS • Laravel • React • Multi-tenant • Sur-mesure • API • UI/UX •
               SaaS • Laravel • React • Multi-tenant • Sur-mesure • API • UI/UX •
             </div>
@@ -208,11 +208,14 @@ const Home = () => {
       </ScrollRevealSection>
       {/* ABOUT */}
       <ScrollRevealSection>
-        <section className="pt-20 pb-20 px-6 max-w-7xl mx-auto" id="about">
+        <section
+          className="pt-16 md:pt-20 pb-16 md:pb-20 px-4 sm:px-6 max-w-7xl mx-auto"
+          id="about"
+        >
           <span className="text-lime font-bold uppercase tracking-widest text-xs mb-4 block">
             Qui nous sommes
           </span>
-          <h1 className="text-6xl md:text-8xl font-black leading-none mb-12">
+          <h1 className="text-4xl sm:text-5xl md:text-8xl font-black leading-none mb-10 md:mb-12">
             L'ADN D'UNE AGENCE. <br /> L'AMBITION D'UNE{" "}
             <span
               className="text-transparent bg-clip-text"
@@ -255,7 +258,7 @@ const Home = () => {
             }}
           ></div>
 
-          <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center relative z-10">
             <div className="order-2 lg:order-1">
               <div className="aspect-square rounded-[3rem] overflow-hidden relative">
                 <img
@@ -263,19 +266,23 @@ const Home = () => {
                   className="w-full h-full object-cover grayscale"
                   alt="SaaS Architecture"
                 />
-                <div className="absolute bottom-8 left-8 right-8 rtl:right-8 rtl:left-auto bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl">
+                <div className="absolute bottom-4 sm:bottom-8 left-4 sm:left-8 right-4 sm:right-8 rtl:right-4 sm:rtl:right-8 rtl:left-auto bg-white/10 backdrop-blur-md border border-white/20 p-4 sm:p-6 rounded-2xl">
                   <div className="flex justify-between items-end">
                     <div>
                       <p className="text-xs font-bold uppercase tracking-widest text-lime mb-1">
                         Modèle Agence
                       </p>
-                      <p className="text-3xl font-bold">Sur-mesure</p>
+                      <p className="text-2xl sm:text-3xl font-bold">
+                        Sur-mesure
+                      </p>
                     </div>
                     <div className="text-right">
                       <p className="text-xs font-bold uppercase tracking-widest text-lime mb-1">
                         Modèle Éditeur
                       </p>
-                      <p className="text-3xl font-bold">SaaS (MRR)</p>
+                      <p className="text-2xl sm:text-3xl font-bold">
+                        SaaS (MRR)
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -283,7 +290,7 @@ const Home = () => {
             </div>
 
             <div className="order-1 lg:order-2">
-              <h2 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-8 leading-tight">
                 Nous créons pour nos clients. <br />{" "}
                 <span className="text-lime">Nous innovons pour nous.</span>
               </h2>
@@ -300,15 +307,19 @@ const Home = () => {
                 exécuter, mais à bâtir des produits rentables et évolutifs.
               </p>
 
-              <div className="grid grid-cols-2 gap-8 border-t border-zinc-800 pt-8">
+              <div className="grid grid-cols-2 gap-6 sm:gap-8 border-t border-zinc-800 pt-8">
                 <div>
-                  <p className="text-4xl font-bold mb-2 text-lime">100%</p>
+                  <p className="text-3xl sm:text-4xl font-bold mb-2 text-lime">
+                    100%
+                  </p>
                   <p className="text-sm font-bold uppercase tracking-widest text-zinc-500">
                     Indépendance Financière
                   </p>
                 </div>
                 <div>
-                  <p className="text-4xl font-bold mb-2 text-lime">01</p>
+                  <p className="text-3xl sm:text-4xl font-bold mb-2 text-lime">
+                    01
+                  </p>
                   <p className="text-sm font-bold uppercase tracking-widest text-zinc-500">
                     Concept SaaS (CRM)
                   </p>
@@ -320,7 +331,10 @@ const Home = () => {
       </ScrollRevealSection>
       {/* SERVICES */}
       <ScrollRevealSection>
-        <section id="services" className="py-32 px-6 max-w-7xl mx-auto">
+        <section
+          id="services"
+          className="py-20 md:py-32 px-4 sm:px-6 max-w-7xl mx-auto"
+        >
           <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -337,7 +351,7 @@ const Home = () => {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group p-8 rounded-4xl bg-zinc-100 dark:bg-zinc-900 hover:bg-black dark:hover:bg-lime transition-colors duration-500 relative overflow-hidden"
+                className="group p-6 sm:p-8 rounded-4xl bg-zinc-100 dark:bg-zinc-900 hover:bg-black dark:hover:bg-lime transition-colors duration-500 relative overflow-hidden"
               >
                 <div className="mb-8">
                   <div className="w-12 h-12 bg-white dark:bg-zinc-800 rounded-full flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
@@ -364,11 +378,11 @@ const Home = () => {
           id="teams"
           className="py-20 bg-zinc-50 dark:bg-zinc-900 border-t border-zinc-200 dark:border-zinc-800"
         >
-          <div className="max-w-7xl mx-auto px-6">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <h2 className="text-4xl md:text-5xl font-black mb-16 text-center">
               Notre équipe.
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 ">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 sm:gap-16 lg:gap-20 ">
               {[
                 {
                   name: "Haitam El Atifi",
@@ -408,7 +422,7 @@ const Home = () => {
       <ScrollRevealSection>
         <section
           id="Temoignages"
-          className="py-20 px-6 max-w-7xl mx-auto border-t border-zinc-200 dark:border-zinc-800"
+          className="py-20 px-4 sm:px-6 max-w-7xl mx-auto border-t border-zinc-200 dark:border-zinc-800"
         >
           <div className="mb-16 text-center">
             <span className="text-lime font-bold uppercase tracking-widest text-xs">
@@ -423,7 +437,7 @@ const Home = () => {
             {testimonials.map((t, index) => (
               <div
                 key={index}
-                className={`p-10 rounded-4xl border ${t.highlight ? "bg-zinc-900 dark:bg-zinc-800 text-white border-zinc-800 dark:border-zinc-700 relative overflow-hidden" : "bg-zinc-50 dark:bg-zinc-900 border-zinc-100 dark:border-zinc-800"}`}
+                className={`p-6 sm:p-10 rounded-4xl border ${t.highlight ? "bg-zinc-900 dark:bg-zinc-800 text-white border-zinc-800 dark:border-zinc-700 relative overflow-hidden" : "bg-zinc-50 dark:bg-zinc-900 border-zinc-100 dark:border-zinc-800"}`}
               >
                 {t.highlight && (
                   <div className="absolute top-0 right-0 w-20 h-20 bg-lime blur-[50px] opacity-20"></div>
@@ -455,11 +469,11 @@ const Home = () => {
 
       {/* CTA SECTION */}
       <ScrollRevealSection>
-        <section className="py-32 px-6 max-w-7xl mx-auto text-center">
-          <h2 className="text-5xl md:text-7xl font-black mb-8">
+        <section className="py-20 md:py-32 px-4 sm:px-6 max-w-7xl mx-auto text-center">
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-black mb-8">
             Prêt à dominer ?
           </h2>
-          <p className="text-xl text-zinc-500 dark:text-zinc-400 mb-12 max-w-2xl mx-auto">
+          <p className="text-base sm:text-xl text-zinc-500 dark:text-zinc-400 mb-12 max-w-2xl mx-auto">
             Arrêtez de deviner avec votre budget marketing. Construisons pour
             votre entreprise un moteur de revenus prévisible.
           </p>

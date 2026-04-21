@@ -22,12 +22,12 @@ const Header = () => {
       <header
         className={`fixed top-0 w-full z-50 transition-all duration-300 border-b py-4 ${scrolled ? "bg-white/90 dark:bg-dark/90 backdrop-blur-md border-zinc-200 dark:border-zinc-800 shadow-sm" : "border-transparent bg-transparent"}`}
       >
-        <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
           <Link to="/" className="flex items-center group">
             <img
               src={logo}
               alt="GECORE 360 logo"
-              className="h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+              className="h-10 sm:h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
             />
           </Link>
 
@@ -102,7 +102,7 @@ const Header = () => {
       </header>
 
       <div
-        className={`fixed inset-0 z-60 bg-dark text-white flex-col justify-center items-center p-8 transition-all duration-300 ${mobileMenuOpen ? "flex opacity-100 scale-100" : "hidden opacity-0 scale-95 pointer-events-none"}`}
+        className={`fixed inset-0 z-[60] bg-dark text-white flex-col justify-center items-center p-6 sm:p-8 transition-all duration-300 ${mobileMenuOpen ? "flex opacity-100 scale-100" : "hidden opacity-0 scale-95 pointer-events-none"}`}
       >
         <button
           onClick={() => setMobileMenuOpen(false)}
@@ -123,7 +123,7 @@ const Header = () => {
           </svg>
         </button>
 
-        <nav className="flex flex-col gap-8 text-center text-4xl font-bold tracking-tight w-full max-w-md overflow-y-auto max-h-[80vh] no-scrollbar">
+        <nav className="flex flex-col gap-6 sm:gap-8 text-center text-3xl sm:text-4xl font-bold tracking-tight w-full max-w-md overflow-y-auto max-h-[80vh] no-scrollbar">
           <Link
             to="/"
             onClick={() => setMobileMenuOpen(false)}

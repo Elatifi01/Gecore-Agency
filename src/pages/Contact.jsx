@@ -75,10 +75,10 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen pt-40 pb-20 px-6 max-w-7xl mx-auto flex items-center relative">
+    <div className="min-h-screen pt-28 md:pt-40 pb-16 md:pb-20 px-4 sm:px-6 max-w-7xl mx-auto flex items-center relative">
       {/* Success Toast */}
       <div
-        className={`fixed top-20 right-6 bg-lime text-black px-6 py-4 rounded-xl shadow-2xl z-50 transform transition-all duration-300 flex items-center gap-3 ${formStatus === "success" ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0 pointer-events-none"}`}
+        className={`fixed top-20 left-4 right-4 sm:left-auto sm:right-6 bg-lime text-black px-4 sm:px-6 py-4 rounded-xl shadow-2xl z-50 transform transition-all duration-300 flex items-center gap-3 ${formStatus === "success" ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0 pointer-events-none"}`}
       >
         <svg
           className="w-6 h-6"
@@ -97,7 +97,7 @@ const Contact = () => {
       </div>
 
       <div
-        className={`fixed bottom-6 right-6 bg-red-600 text-white px-6 py-4 rounded-xl shadow-2xl z-50 transform transition-all duration-300 flex items-center gap-3 ${formStatus === "error" ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0 pointer-events-none"}`}
+        className={`fixed bottom-6 left-4 right-4 sm:left-auto sm:right-6 bg-red-600 text-white px-4 sm:px-6 py-4 rounded-xl shadow-2xl z-50 transform transition-all duration-300 flex items-center gap-3 ${formStatus === "error" ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0 pointer-events-none"}`}
       >
         <svg
           className="w-6 h-6"
@@ -115,12 +115,12 @@ const Contact = () => {
         <span className="font-bold">Erreur d'envoi, réessayez.</span>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 w-full">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 w-full">
         <div>
           <span className="text-lime font-bold uppercase tracking-widest text-xs mb-4 block">
             Entrons en contact
           </span>
-          <h1 className="text-6xl md:text-7xl font-black leading-none mb-8 text-zinc-900 dark:text-white">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black leading-none mb-8 text-zinc-900 dark:text-white">
             <span>COMMENÇONS UN</span>
             <br />
             <span
@@ -132,7 +132,7 @@ const Contact = () => {
               PROJET.
             </span>
           </h1>
-          <p className="text-xl text-zinc-500 dark:text-zinc-400 mb-12 max-w-md">
+          <p className="text-base sm:text-xl text-zinc-500 dark:text-zinc-400 mb-10 md:mb-12 max-w-md">
             Nous sommes sélectifs sur les projets que nous prenons. Parlez-nous
             de vos objectifs, de votre calendrier et de votre budget, et voyons
             si nous sommes compatibles.
@@ -144,7 +144,7 @@ const Contact = () => {
               </p>
               <a
                 href="mailto:gecore360@gmail.com"
-                className="text-2xl font-bold hover:text-lime transition-colors text-zinc-900 dark:text-white"
+                className="text-xl sm:text-2xl font-bold hover:text-lime transition-colors text-zinc-900 dark:text-white break-all"
               >
                 gecore360@gmail.com
               </a>
@@ -163,7 +163,7 @@ const Contact = () => {
               <p className="text-sm font-bold uppercase tracking-widest text-zinc-400 mb-2">
                 Suivez-nous
               </p>
-              <div className="flex gap-6 text-lg font-bold">
+              <div className="flex flex-wrap gap-4 sm:gap-6 text-base sm:text-lg font-bold">
                 <a
                   href="https://www.instagram.com/gecore360/"
                   className="hover:text-lime transition text-zinc-900 dark:text-white"
@@ -187,13 +187,13 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="bg-zinc-50 dark:bg-zinc-900/50 p-10 md:p-14 rounded-[3rem] border border-zinc-200 dark:border-zinc-800">
+        <div className="bg-zinc-50 dark:bg-zinc-900/50 p-6 sm:p-10 md:p-14 rounded-[2rem] sm:rounded-[3rem] border border-zinc-200 dark:border-zinc-800">
           <form
             onSubmit={handleSubmit}
             className={`space-y-10 ${isTouched ? "was-validated" : ""}`}
             noValidate
           >
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
               <div className="relative group">
                 <label className="block text-xs font-bold uppercase tracking-widest mb-2 text-zinc-500 group-focus-within:text-lime transition-colors">
                   Nom
