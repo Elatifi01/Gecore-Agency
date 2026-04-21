@@ -2,6 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { useSEO } from "../hooks/useSEO";
 import Contact from "./Contact";
+import haitamImg from "../assets/img/haitam.webp";
+import donelImg from "../assets/img/donel.webp";
+import fregisImg from "../assets/img/fregis.webp";
 
 const ScrollRevealSection = ({ children }) => {
   const sectionRef = useRef(null);
@@ -330,23 +333,23 @@ const Home = () => {
                 {
                   name: "Haitam El Atifi",
                   role: "Développeur Full-Stack",
-                  img: "68",
+                  img: haitamImg,
                 },
                 {
                   name: "ATARGA ONDO Donel",
                   role: "Développeur Front-end & Designer Graphique",
-                  img: "11",
+                  img: donelImg,
                 },
                 {
                   name: "Fregis Omanda",
                   role: "Designer - Développeur",
-                  img: "33",
+                  img: fregisImg,
                 },
               ].map((member, i) => (
                 <div key={i} className="group text-center">
                   <div className="aspect-square rounded-full overflow-hidden mb-6 border-2 border-transparent group-hover:border-lime transition-all duration-300 relative">
                     <img
-                      src={`https://i.pravatar.cc/400?img=${member.img}`}
+                      src={member.img}
                       className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all"
                       alt={member.name}
                     />
