@@ -6,15 +6,18 @@ const Footer = ({ darkMode, toggleDarkMode, isRtl, toggleRtl }) => {
     <footer className="bg-zinc-100 dark:bg-zinc-900 pt-20 pb-10 border-t border-zinc-200 dark:border-zinc-800">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 border-b border-zinc-200 dark:border-zinc-800 pb-16">
-          <div className="col-span-1 md:col-span-2">
-            <Link to="/" className="flex items-center mb-6">
+          <div className="col-span-1 md:col-span-2 text-center md:text-left">
+            <Link
+              to="/"
+              className="flex items-center justify-center md:justify-start mb-6"
+            >
               <img
                 src={logo}
                 alt="GECORE 360 logo"
-                className="h-14 w-auto object-contain"
+                className="h-12 sm:h-14 w-auto object-contain"
               />
             </Link>
-            <p className="max-w-sm text-zinc-500 dark:text-zinc-400">
+            <p className="max-w-sm md:max-w-sm mx-auto md:mx-0 text-zinc-500 dark:text-zinc-400">
               Un studio d'ingénierie web et éditeur de solutions SaaS, axé sur
               la performance technique, l'innovation et la création de produits
               scalables.

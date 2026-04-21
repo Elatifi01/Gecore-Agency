@@ -22,12 +22,15 @@ const Header = () => {
       <header
         className={`fixed top-0 w-full z-50 transition-all duration-300 border-b py-4 ${scrolled ? "bg-white/90 dark:bg-dark/90 backdrop-blur-md border-zinc-200 dark:border-zinc-800 shadow-sm" : "border-transparent bg-transparent"}`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
-          <Link to="/" className="flex items-center group">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center relative">
+          <Link
+            to="/"
+            className="flex items-center group absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0"
+          >
             <img
               src={logo}
               alt="GECORE 360 logo"
-              className="h-10 sm:h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+              className="h-9 sm:h-10 md:h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
             />
           </Link>
 
@@ -71,7 +74,7 @@ const Header = () => {
             </Link>
           </nav>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 ml-auto md:ml-0">
             <Link
               to="/#contact"
               className="hidden md:block bg-zinc-900 dark:bg-white text-white dark:text-black px-6 py-2.5 rounded-full text-sm font-bold hover:scale-105 transition-transform"

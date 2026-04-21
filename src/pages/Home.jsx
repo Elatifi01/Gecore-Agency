@@ -401,7 +401,7 @@ const Home = () => {
                 },
               ].map((member, i) => (
                 <div key={i} className="group text-center">
-                  <div className="aspect-square rounded-full overflow-hidden mb-6 border-2 border-transparent group-hover:border-lime transition-all duration-300 relative">
+                  <div className="w-44 h-44 sm:w-full sm:h-auto sm:aspect-square mx-auto rounded-full overflow-hidden mb-6 border-2 border-transparent group-hover:border-lime transition-all duration-300 relative">
                     <img
                       src={member.img}
                       className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all"
