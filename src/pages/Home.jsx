@@ -131,8 +131,7 @@ const Home = () => {
               <p className="text-base sm:text-lg md:text-xl text-zinc-500 dark:text-zinc-400 max-w-lg leading-relaxed mb-8 md:mb-10">
                 GECORE 360° est un studio web hybride. Nous créons des
                 expériences sur-mesure pour nos clients et concevons nos propres
-                solutions SaaS (comme le CRM Alumni) pour redéfinir les
-                standards du marché.
+                solutions SaaS pour redéfinir les standards du marché.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
