@@ -11,7 +11,6 @@ const Contact = () => {
     name: "",
     email: "",
     service: "",
-    budget: "",
     message: "",
   });
   const [formStatus, setFormStatus] = useState("idle");
@@ -28,7 +27,6 @@ const Contact = () => {
       formData.name.length > 2 &&
       isValidEmail(formData.email) &&
       formData.service !== "" &&
-      formData.budget !== "" &&
       formData.message.length > 10;
 
     if (isValid) {
@@ -39,7 +37,6 @@ const Contact = () => {
           name: "",
           email: "",
           service: "",
-          budget: "",
           message: "",
         });
         setIsTouched(false);
