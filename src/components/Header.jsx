@@ -105,7 +105,7 @@ const Header = () => {
       </header>
 
       <div
-        className={`fixed inset-0 z-[60] bg-dark text-white flex-col justify-center items-center p-6 sm:p-8 transition-all duration-300 ${mobileMenuOpen ? "flex opacity-100 scale-100" : "hidden opacity-0 scale-95 pointer-events-none"}`}
+        className={`fixed inset-0 z-60 bg-dark text-white flex-col justify-center items-center p-6 sm:p-8 transition-all duration-300 ${mobileMenuOpen ? "flex opacity-100 scale-100" : "hidden opacity-0 scale-95 pointer-events-none"}`}
       >
         <button
           onClick={() => setMobileMenuOpen(false)}
@@ -128,29 +128,12 @@ const Header = () => {
 
         <nav className="flex flex-col gap-6 sm:gap-8 text-center text-3xl sm:text-4xl font-bold tracking-tight w-full max-w-md overflow-y-auto max-h-[80vh] no-scrollbar">
           <Link
-            to="/"
+            to="/#home"
             onClick={() => setMobileMenuOpen(false)}
             className="hover:text-lime transition"
           >
             Accueil
           </Link>
-
-          <div className="flex flex-col items-center w-full">
-            <Link
-              to="/#services"
-              onClick={() => setMobileMenuOpen(false)}
-              className="hover:text-lime transition"
-            >
-              Services
-            </Link>
-            <Link
-              to="/#teams"
-              onClick={() => setMobileMenuOpen(false)}
-              className="hover:text-lime transition"
-            >
-              Teams
-            </Link>
-          </div>
 
           <Link
             to="/#about"
@@ -158,6 +141,27 @@ const Header = () => {
             className="hover:text-lime transition"
           >
             À propos
+          </Link>
+          <Link
+            to="/#services"
+            onClick={() => setMobileMenuOpen(false)}
+            className="hover:text-lime transition"
+          >
+            Services
+          </Link>
+          <Link
+            to="/#teams"
+            onClick={() => setMobileMenuOpen(false)}
+            className="hover:text-lime transition"
+          >
+            Teams
+          </Link>
+          <Link
+            to="/#Temoignages"
+            onClick={() => setMobileMenuOpen(false)}
+            className="hover:text-lime transition"
+          >
+            Témoignages
           </Link>
           <Link
             to="/#contact"
