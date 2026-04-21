@@ -40,7 +40,7 @@ const ScrollRevealSection = ({ children }) => {
 
 const Home = () => {
   useSEO({
-    title: "Gecore 360° | Agence de croissance digitale",
+    title: "Gecore 360° | Agence hybrid digitale",
     description: "",
   });
   const services = [
@@ -104,7 +104,10 @@ const Home = () => {
     <>
       {/* HERO SECTION */}
       <ScrollRevealSection>
-        <section className="pt-40 pb-20 px-6 max-w-7xl mx-auto min-h-screen flex items-center">
+        <section
+          id="home"
+          className="pt-40 pb-20 px-6 max-w-7xl mx-auto min-h-screen flex items-center"
+        >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-30 items-center ">
             {/* Left: Text */}
             <div className="relative z-10">
@@ -315,6 +318,46 @@ const Home = () => {
           </div>
         </section>
       </ScrollRevealSection>
+      {/* SERVICES */}
+      <ScrollRevealSection>
+        <section id="services" className="py-32 px-6 max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                Notre expertise
+              </h2>
+              <p className="text-zinc-500 dark:text-zinc-400 max-w-sm">
+                Des capacités complètes pensées pour gérer chaque aspect de
+                votre présence digitale.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="group p-8 rounded-4xl bg-zinc-100 dark:bg-zinc-900 hover:bg-black dark:hover:bg-lime transition-colors duration-500 relative overflow-hidden"
+              >
+                <div className="mb-8">
+                  <div className="w-12 h-12 bg-white dark:bg-zinc-800 rounded-full flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                    {service.icon}
+                  </div>
+                  <h3 className="text-2xl font-bold group-hover:text-white dark:group-hover:text-black transition-colors">
+                    {service.title}
+                  </h3>
+                </div>
+                <p className="text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-300 dark:group-hover:text-zinc-800 transition-colors">
+                  {service.desc}
+                </p>
+                <div className="absolute top-8 right-8 rtl:right-auto rtl:left-8 opacity-0 group-hover:opacity-100 transition-opacity text-white dark:text-black">
+                  ↗
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      </ScrollRevealSection>
       {/* TEAMS */}
       <ScrollRevealSection>
         <section
@@ -361,49 +404,12 @@ const Home = () => {
           </div>
         </section>
       </ScrollRevealSection>
-      {/* SERVICES */}
-      <ScrollRevealSection>
-        <section id="services" className="py-32 px-6 max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                Notre expertise
-              </h2>
-              <p className="text-zinc-500 dark:text-zinc-400 max-w-sm">
-                Des capacités complètes pensées pour gérer chaque aspect de
-                votre présence digitale.
-              </p>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="group p-8 rounded-4xl bg-zinc-100 dark:bg-zinc-900 hover:bg-black dark:hover:bg-lime transition-colors duration-500 relative overflow-hidden"
-              >
-                <div className="mb-8">
-                  <div className="w-12 h-12 bg-white dark:bg-zinc-800 rounded-full flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
-                    {service.icon}
-                  </div>
-                  <h3 className="text-2xl font-bold group-hover:text-white dark:group-hover:text-black transition-colors">
-                    {service.title}
-                  </h3>
-                </div>
-                <p className="text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-300 dark:group-hover:text-zinc-800 transition-colors">
-                  {service.desc}
-                </p>
-                <div className="absolute top-8 right-8 rtl:right-auto rtl:left-8 opacity-0 group-hover:opacity-100 transition-opacity text-white dark:text-black">
-                  ↗
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-      </ScrollRevealSection>
       {/* TESTIMONIALS SECTION */}
       <ScrollRevealSection>
-        <section className="py-20 px-6 max-w-7xl mx-auto border-t border-zinc-200 dark:border-zinc-800">
+        <section
+          id="Temoignages"
+          className="py-20 px-6 max-w-7xl mx-auto border-t border-zinc-200 dark:border-zinc-800"
+        >
           <div className="mb-16 text-center">
             <span className="text-lime font-bold uppercase tracking-widest text-xs">
               Témoignages clients
@@ -446,79 +452,6 @@ const Home = () => {
           <Contact />
         </div>
       </ScrollRevealSection>
-      {/* ABOUT / SPLIT SECTION */}
-      {/* <section
-        id="about"
-        className="py-20 bg-black text-white relative overflow-hidden"
-      >
-        <div
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage:
-              "url('https://grainy-gradients.vercel.app/noise.svg')",
-          }}
-        ></div>
-
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10">
-          <div className="order-2 lg:order-1">
-            <div className="aspect-square rounded-[3rem] overflow-hidden relative">
-              <img
-                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1000"
-                className="w-full h-full object-cover grayscale"
-                alt="Stats"
-              />
-              <div className="absolute bottom-8 left-8 right-8 rtl:right-8 rtl:left-auto bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl">
-                <div className="flex justify-between items-end">
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-widest text-lime mb-1">
-                      ROI généré
-                    </p>
-                    <p className="text-3xl font-bold">$12M+</p>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-xs font-bold uppercase tracking-widest text-lime mb-1">
-                      Rétention client
-                    </p>
-                    <p className="text-3xl font-bold">94%</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="order-1 lg:order-2">
-            <h2 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
-              Nous ne suivons pas les tendances. <br />{" "}
-              <span className="text-lime">Nous les créons.</span>
-            </h2>
-            <p className="text-zinc-400 text-lg leading-relaxed mb-8">
-              Fondée en 2020, NEXUS est née d'une frustration face au marketing
-              trop prudent. Dans un paysage digital saturé, le plus grand risque
-              est l'immobilisme.
-            </p>
-            <p className="text-zinc-400 text-lg leading-relaxed mb-12">
-              Notre équipe réunit des analystes de données, des directeurs
-              artistiques et des experts du code qui travaillent en synergie
-              pour créer des expériences digitales qui comptent vraiment.
-            </p>
-
-            <div className="grid grid-cols-2 gap-8 border-t border-zinc-800 pt-8">
-              <div>
-                <p className="text-4xl font-bold mb-2 text-lime">50+</p>
-                <p className="text-sm font-bold uppercase tracking-widest text-zinc-500">
-                  Clients internationaux
-                </p>
-              </div>
-              <div>
-                <p className="text-4xl font-bold mb-2 text-lime">12</p>
-                <p className="text-sm font-bold uppercase tracking-widest text-zinc-500">
-                  Distinctions créatives
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
 
       {/* CTA SECTION */}
       <ScrollRevealSection>

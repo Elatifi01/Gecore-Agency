@@ -33,7 +33,7 @@ const Header = () => {
 
           <nav className="hidden md:flex items-center gap-8 font-medium text-sm uppercase tracking-wider relative">
             <Link
-              to="/"
+              to="/#home"
               className="text-zinc-600 hover:text-lime dark:text-zinc-300 dark:hover:text-lime transition"
             >
               Accueil
@@ -56,6 +56,12 @@ const Header = () => {
               className="text-zinc-600 hover:text-lime dark:text-zinc-300 dark:hover:text-lime transition"
             >
               Teams
+            </Link>
+            <Link
+              to="/#Temoignages"
+              className="text-zinc-600 hover:text-lime dark:text-zinc-300 dark:hover:text-lime transition"
+            >
+              Témoignages
             </Link>
             <Link
               to="/#contact"

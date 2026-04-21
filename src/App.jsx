@@ -8,12 +8,17 @@ const App = () => {
     <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Navigate to="/#home" replace />} />
         <Route
           path="/services"
           element={<Navigate to="/#services" replace />}
         />
         <Route path="/about" element={<Navigate to="/#about" replace />} />
         <Route path="/contact" element={<Contact />} />
+        <Route
+          path="/Temoignages"
+          element={<Navigate to="/#Temoignages" replace />}
+        />
       </Routes>
     </Layout>
   );
