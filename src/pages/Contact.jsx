@@ -19,7 +19,7 @@ const Contact = () => {
   const isValidEmail = (email) =>
     /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsTouched(true);
 
@@ -29,19 +29,44 @@ const Contact = () => {
       formData.service !== "" &&
       formData.message.length > 10;
 
-    if (isValid) {
+    if (!isValid) {
+      return;
+    }
+
+    try {
       setFormStatus("submitting");
-      setTimeout(() => {
-        setFormStatus("success");
-        setFormData({
-          name: "",
-          email: "",
-          service: "",
-          message: "",
-        });
-        setIsTouched(false);
-        setTimeout(() => setFormStatus("idle"), 3000);
-      }, 1500);
+
+      const response = await fetch("https://formspree.io/f/mzdyalvz", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          service: formData.service,
+          message: formData.message,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Formspree request failed");
+      }
+
+      setFormStatus("success");
+      setFormData({
+        name: "",
+        email: "",
+        service: "",
+        message: "",
+      });
+      setIsTouched(false);
+      setTimeout(() => setFormStatus("idle"), 3000);
+    } catch (error) {
+      console.error("Contact submit error:", error);
+      setFormStatus("error");
+      setTimeout(() => setFormStatus("idle"), 3500);
     }
   };
 
@@ -53,7 +78,7 @@ const Contact = () => {
     <div className="min-h-screen pt-40 pb-20 px-6 max-w-7xl mx-auto flex items-center relative">
       {/* Success Toast */}
       <div
-        className={`fixed bottom-6 right-6 bg-lime text-black px-6 py-4 rounded-xl shadow-2xl z-50 transform transition-all duration-300 flex items-center gap-3 ${formStatus === "success" ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0 pointer-events-none"}`}
+        className={`fixed top-20 right-6 bg-lime text-black px-6 py-4 rounded-xl shadow-2xl z-50 transform transition-all duration-300 flex items-center gap-3 ${formStatus === "success" ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0 pointer-events-none"}`}
       >
         <svg
           className="w-6 h-6"
@@ -69,6 +94,25 @@ const Contact = () => {
           ></path>
         </svg>
         <span className="font-bold">Message envoyé avec succès !</span>
+      </div>
+
+      <div
+        className={`fixed bottom-6 right-6 bg-red-600 text-white px-6 py-4 rounded-xl shadow-2xl z-50 transform transition-all duration-300 flex items-center gap-3 ${formStatus === "error" ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0 pointer-events-none"}`}
+      >
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M6 18L18 6M6 6l12 12"
+          ></path>
+        </svg>
+        <span className="font-bold">Erreur d'envoi, réessayez.</span>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 w-full">
