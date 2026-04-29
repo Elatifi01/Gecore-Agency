@@ -14,7 +14,7 @@ const Footer = ({ darkMode, toggleDarkMode, isRtl, toggleRtl }) => {
               <img
                 src={logo}
                 alt="GECORE 360 logo"
-                className="h-12 sm:h-14 w-auto object-contain"
+                className="w-40 sm:w-48 h-auto object-contain"
               />
             </Link>
             <p className="max-w-sm md:max-w-sm mx-auto md:mx-0 text-zinc-500 dark:text-zinc-400">

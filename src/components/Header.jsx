@@ -30,7 +30,7 @@ const Header = () => {
             <img
               src={logo}
               alt="GECORE 360 logo"
-              className="h-9 sm:h-10 md:h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+              className="w-28 sm:w-32 md:w-40 h-auto object-contain group-hover:scale-105 transition-transform duration-300"
             />
           </Link>
 

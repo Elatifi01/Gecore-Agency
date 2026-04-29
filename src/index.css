@@ -30,6 +30,15 @@
   }
 }
 
+/* Anchor offset to account for fixed navbar height */
+:root {
+  --header-height: 5rem; /* adjust if header height changes */
+}
+
+section[id] {
+  scroll-margin-top: var(--header-height);
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
